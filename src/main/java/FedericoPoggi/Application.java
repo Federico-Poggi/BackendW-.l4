@@ -34,6 +34,10 @@ public class Application {
         listaProdotti.add(pista);
         listaProdotti.add(coltello);
 
-        listaProdotti.stream().filter(str->str.equals("Books")).forEach(System.out::println);
+        List<Prodotti> listaProdottimaggcento=listaProdotti.stream().filter(prodotti -> prodotti.getCategoria().equals("Books")&&prodotti.getSinglePrice()>100).toList();
+        System.out.println(listaProdottimaggcento.toString());
+
     }
+
+
 }
